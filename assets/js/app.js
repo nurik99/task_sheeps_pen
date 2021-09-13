@@ -120,6 +120,10 @@ axios('./backend/req.php?get_sheepsPen=1')
 // timer
 var timer = setInterval(() => {
   largeSheepPen();
+  autoScroll('f_sheepPen');
+  autoScroll('s_sheepPen');
+  autoScroll('t_sheepPen');
+  autoScroll('fo_sheepPen');
   document.getElementById('timer').value = (document.getElementById('timer').value * 1) + 1;
   let v = (document.getElementById('timer').value * 1) % 10;
   let plusDay = (document.getElementById('dayCount').value * 1) + 1;
@@ -350,3 +354,12 @@ function murder_sheeps() {
 function update() {
   location.reload();
 }
+
+// auto scroll patch
+
+function autoScroll(id) {
+  var elem = document.getElementById(id);  
+  elem.scrollTop = elem.scrollHeight;
+  // console.log(elem.scrollTop);
+}
+ 

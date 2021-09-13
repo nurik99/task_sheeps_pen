@@ -4,6 +4,7 @@ function saveText(a, text){
 }
 
 var timer = setInterval(() => {
+    autoScroll('log');
     axios('./backend/req.php?log_get=1')
     .then(function (response) {
         // console.log(response.data)
@@ -39,7 +40,7 @@ var timer = setInterval(() => {
     axios('./backend/req.php?get_max_sheeps_pen=1')
     .then(function (response) {
         // console.log(response.data)
-        document.getElementById('max').innerHTML = response.data.num + '-ый загон';
+        document.getElementById('max').innerHTML = response.data.num + '- загон';
     })
     .catch(function (error) {
         console.log(error);
@@ -47,7 +48,7 @@ var timer = setInterval(() => {
     axios('./backend/req.php?get_min_sheeps_pen=1')
     .then(function (response) {
         // console.log(response.data)
-        document.getElementById('min').innerHTML = response.data.num + '-ый загон';
+        document.getElementById('min').innerHTML = response.data.num + '- загон';
     })
     .catch(function (error) {
         console.log(error);
@@ -59,3 +60,10 @@ function clean_log() {
     axios('./backend/req.php?log_clean=1')
 }
 
+// auto scroll patch
+
+function autoScroll(id) {
+  var elem = document.getElementById(id);  
+  elem.scrollTop = elem.scrollHeight;
+  // console.log(elem.scrollTop);
+}
