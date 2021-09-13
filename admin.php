@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 		<label for="log">LOG </label>
 		<br>
 		<textarea name="log" id="log" cols="40" rows="10"></textarea>

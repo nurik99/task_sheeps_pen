@@ -10,7 +10,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="margin-top: 20px;">
 		<div class="row">
 			<textarea name="f_sheepPen" id="f_sheepPen" class="textarea col-6" rows="8"></textarea>
 			<textarea name="s_sheepPen" id="s_sheepPen" class="textarea col-6" rows="8"></textarea>
@@ -19,6 +19,14 @@
 			<textarea name="t_sheepPen" id="t_sheepPen" class="textarea col-6" rows="8"></textarea>
 			<textarea name="fo_sheepPen" id="fo_sheepPen" class="textarea col-6" rows="8"></textarea>
 		</div>
+		<br>
+		<br>
+		<select name="cmpt" id="cmpt">
+			<option value="add">Add sheep</option>
+			<option value="change">Change sheep</option>
+			<option value="delete">Delete sheep</option>
+		</select>
+		<input type="text" placeholder="/13 to 1">
 		<br>
 		<br>
 		<button class="button" onclick="update()">Обновить</button>
